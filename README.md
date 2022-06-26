@@ -2,4 +2,6 @@
 
 Free and open source dashboard template using Tailwind CSS.
 
-[Demo](#)
+[Dark Demo](https://play.tailwindcss.com/cxo4RMYrei)
+
+[Light Demo](https://play.tailwindcss.com/rRQCqidGDH)
