@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../dist/tailwind.css" />
   </head>
   <body class="min-h-screen">
-    <section class="flex relative max-w-full h-full w-full dark:bg-gray-800">
-      <div class="absolute md:static top-0 left-0 pb-0 dark:md:border-r dark:md:border-r-gray-700 dark:md:bg-gray-900/30 bg-gray-800 md:bg-gray-800">
+    <section class="flex relative h-full w-full dark:bg-gray-800">
+      <div class="absolute md:static w-64 top-0 left-0 pb-0 dark:md:border-r dark:md:border-r-gray-700 dark:md:bg-gray-900/30 bg-gray-800 md:bg-gray-800">
         <div class="flex flex-col justify-center md:justify-start text-cyan-500">
           <div class="flex p-1 md:p-3 w-full items-center justify-center space-x-1 md:pt-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="mt-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,7 +90,7 @@
               </li>
             </ul>
           </div>
-          <div class="absolute w-full bottom-0 dark:bg-gray-900/40 left-0 bg-gray-900/40 md:block hidden text-gray-400 p-4">
+          <div class="absolute bottom-0 w-[225px] dark:bg-gray-900/40 left-0 bg-gray-900/40 md:block hidden text-gray-400 p-4">
             <a href="#" class="mt-0.5 text-gray-400">
               <div class="flex items-start space-x-2">
                 <span class="mt-1 inline-block h-6 w-6 rounded-full overflow-hidden bg-gray-300">
@@ -107,16 +107,19 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col w-full dark:bg-gray-900">
-        <div class="py-0 md:py-2 dark:shadow-none shadow-sm dark:bg-gray-800 md:bg-white bg-gray-800 dark:md:bg-gray-900">
+      
+      <div class="flex flex-col w-full bg-gray-50 dark:bg-gray-900">
+        <div class="py-0 md:py-4 dark:shadow-none shadow-sm dark:bg-gray-800 md:bg-white bg-gray-800 dark:md:bg-gray-900">
           <div class="flex flex-row items-center justify-end md:justify-between w-full">
-            <div class="relative flex-1 ml-3 w-full hidden md:block">
-              <input type="text" placeholder="Search..." class="dark:md:bg-gray-800 md:bg-slate-100 border-0 ring-offset-slate-100 dark:bg-gray-700 placeholder:text-gray-400 rounded-l-3xl rounded-r-3xl text-sm py-2 dark:py-2 pl-10 xl:w-1/4 w-1/2 ring-1 dark:ring-transparent dark:ring-offset-0 ring-gray-300 dark:ring-offset-gray-700 caret-cyan-500 outline-none ring-offset-2 focus:ring-2 focus:ring-cyan-600 dark:focus:ring-cyan-600" />
-              <div class="absolute inset-2 text-gray-400 pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="relative text-right mr-12 w-full hidden md:block group transition-colors duration-500">
+   
+              <input type="text" placeholder="Search..." class="dark:md:bg-gray-800 group-focus-within:transition-colors max-w-sm md:bg-slate-100 border-none dark:border dark:border-transparent border-gray-700 ring-offset-slate-100 dark:bg-gray-700 placeholder:text-gray-400 rounded-l-3xl rounded-r-3xl text-sm py-2 dark:py-2 pl-10 xl:w-1/4 w-1/2 ring-1 dark:ring-transparent dark:ring-offset-0 ring-gray-200 dark:ring-gray-700 dark:ring-offset-gray-700 caret-cyan-500 outline-none ring-offset-2 focus:ring-2 focus:ring-cyan-600 dark:focus:ring-cyan-600" />
+              <div class="absolute group-focus-within:text-cyan-500 group-focus-within:transition-colors top-2 right-[22rem] text-gray-500 pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
+
             </div>
             <div>
               <div class="flex items-center md:py-0 py-3 space-x-3 text-gray-400 mr-3">
@@ -132,7 +135,7 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 16.75C9 16.75 9 19.25 12 19.25C15 19.25 15 16.75 15 16.75"></path>
                   </svg>
                 </a>
-                <button class="md:block hidden bg-transparent p-1 dark:ring-offset-gray-800 rounded-md dark:bg-transparent outline-none ring-offset-2 focus:ring-2 focus:ring-cyan-600">
+                <button class="md:hidden hidden bg-transparent p-1 dark:ring-offset-gray-800 rounded-md dark:bg-transparent outline-none ring-offset-2 focus:ring-2 focus:ring-cyan-600">
                   <div class="flex items-center justify-evenly w-48">
                     <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
                     <div class="flex flex-col items-start text-gray-500 text-sm text-left ml-2">
@@ -150,26 +153,57 @@
             </div>
           </div>
         </div>
-        <section class="relative w-full flex-1 max-w-5xl bg-gray-900 md:px-10 md:py-6 px-6 py-6">
-          <div class="">
+        <section class="relative w-full flex-1 max-w-5xl ml-12 bg-transparent dark:bg-gray-900 md:px-10 md:py-6 px-6 py-6">
+   
             <h1 class="text-2xl py-3 font-semibold dark:text-gray-300 text-slate-700">Heading</h1>
+            <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 mb-4">
+              <div class="flex flex-wrap items-start justify-start bg-white p-5 rounded-md border border-gray-200 shadow-sm dark:border-none dark:text-gray-400 w-full dark:bg-gray-800 dark:shadow-gray-700 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0,0.10)]">
+              <!-- <img src="./img/javascript.svg" class="shrink-0 w-8 h-8" />  -->
+              <div class="flex-auto ml-3 -mt-0.5">
+                <p class="text-sm font-semibold text-gray-700 dark:text-gray-400">Javascript</p>
+                <p class="text-xs font-normal dark:text-gray-500">Website</p>
+              </div>
+              </div>
+
+              <div class="flex items-start justify-start bg-white p-5 rounded-md border border-gray-200 shadow-sm dark:border-none dark:text-gray-400 w-full dark:bg-gray-800 dark:shadow-gray-700 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0,0.10)]">
+                <!-- <img src="./img/javascript.svg" class="shrink-0 w-8 h-8" />  -->
+                <div class="flex-auto ml-3 -mt-0.5">
+                  <p class="text-sm font-semibold text-gray-700 dark:text-gray-400">Javascript</p>
+                  <p class="text-xs font-normal dark:text-gray-500">Website</p>
+                </div>
+                </div>
+                <div class="flex items-start justify-start bg-white p-5 rounded-md border border-gray-200 shadow-sm dark:border-none dark:text-gray-400 w-full dark:bg-gray-800 dark:shadow-gray-700 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0,0.10)]">
+                  <!-- <img src="./img/javascript.svg" class="shrink-0 w-8 h-8" />  -->
+                  <div class="flex-auto ml-3 -mt-0.5">
+                    <p class="text-sm font-semibold text-gray-700 dark:text-gray-400">Javascript</p>
+                    <p class="text-xs font-normal dark:text-gray-500">Website</p>
+                  </div>
+                </div>
+            </div>
             <div class="dark:text-gray-400 text-sm p-4 w-full bg-transparent dark:bg-gray-800 dark:shadow-gray-700 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0,0.10)] shadow-sm py-4 rounded prose prose-2xl prose-a:text-sky-700 prose-a:underline-offset-2">
-              <p>Lorem Ipsum is simply dummy text of the printing and <a href="#">typesetting industry</a>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-              <br />
-              <p class="text-sm">Lorem Ipsum is simply dummy text of the printing and <
-                a href="#">typesetting industry</a>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-            <div class="dark:text-gray-400 w-full bg-white dark:bg-gray-800 dark:shadow-gray-700 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0,0.10)] shadow-sm px-6 py-4 md:p-5 mt-4 rounded prose prose-2xl prose-a:text-sky-700 prose-a:underline-offset-2">
-              <p class="text-sm">Lorem Ipsum is simply dummy text of the printing and 
-                <a href="#">typesetting industry</a>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-              <p class="mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p>
+              <h2 class="text-base font-semibold text-gray-400">Content areaa</h2>
+    
             </div>
 
-            <div class="dark:bg-gray-900 text-right absolute bottom-0 left-0 w-full bg-gray-800 shadow py-2 min-h-0 pr-8 text-xs">by</div>
-          </div>
+
+    
         </section>
       </div>
     </section>
   </body>
+  <script>
+    var modeButton = document.getElementById('dark-mode')
+    console.log(modeButton)
+    var htmlElement = document.querySelector('html')
+    var darkMode = false
+    modeButton.addEventListener('click', function() {
+      if ( !darkMode ) { 
+        document.documentElement.classList.add('dark') 
+        darkMode = !darkMode
+      } else {
+        document.documentElement.classList.remove('dark')
+        darkMode = !darkMode
+      }      
+    })
+  </script>
 </html>
